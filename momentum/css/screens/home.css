@@ -1,0 +1,30 @@
+.background-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  min-width: 100%;
+  min-height: 100%;
+}
+/* 가로가 짧은 화면 */
+@media screen and (max-width: 1000px) {
+}
+
+/* 가로로 넓은 화면 */
+@media screen and (min-width: 1000px) {
+  .contents {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contents__main {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+  }
+  #quote {
+    position: absolute;
+    bottom: 5%;
+  }
+}
