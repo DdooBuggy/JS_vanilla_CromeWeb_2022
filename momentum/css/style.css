@@ -1,9 +1,17 @@
+/* 폰트 */
 @import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap");
-@import "screens/home.css";
+
+/* screens */
+@import "screens/horizontally_long.css";
+@import "screens/horizontally_short.css";
+
+/* reset */
+@import "reset.css";
 
 body {
   font-family: "Mochiy Pop P One", sans-serif;
 }
+
 .hidden {
   display: none;
 }

@@ -1,0 +1,78 @@
+/* 가로로 넓은 화면 */
+@media screen and (min-width: 1000px) {
+  .contents {
+    display: flex;
+    height: 97vh;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contents__main {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+  }
+  .clock-and-name-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #greeting {
+    font-size: 50px;
+  }
+  #clock {
+    font-size: 80px;
+    margin-bottom: 50px;
+  }
+  .todo-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+  }
+  #todo-form {
+    margin-bottom: 10px;
+  }
+  #todo-form input::placeholder {
+    font-size: 17px;
+    font-weight: 500;
+  }
+  #todo-form input {
+    width: 100%;
+    font-size: 17px;
+    font-weight: 600;
+    transition: border-color 0.3s ease-in-out;
+  }
+  #todo-form input:focus {
+    border-color: tomato;
+  }
+  .todo-list__component {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5px;
+  }
+  .todo-list__component span {
+    font-size: 20px;
+  }
+  .todo-list__component button {
+    right: 0;
+    border: none;
+    background-color: transparent;
+    font-size: 25px;
+    font-weight: 600;
+  }
+  #quote {
+    position: absolute;
+    bottom: 5%;
+    width: 98vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  #weather {
+    padding: 30px;
+    position: absolute;
+    top: 2%;
+  }
+}
