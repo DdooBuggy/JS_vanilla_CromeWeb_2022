@@ -1,5 +1,5 @@
-const loginForm = document.querySelector("#login-form");
-const loginInput = document.querySelector("#login-form input");
+const loginForm = document.querySelector(".login-form");
+const loginInput = document.querySelector(".login-form input");
 const greeting = document.querySelector("#greeting");
 const todoBox = document.querySelector(".todo-box");
 const clockBox = document.querySelector(".clock-box")
@@ -33,7 +33,7 @@ if (savedUsername === null) {
 } else {
     paintGreetings(savedUsername);
     paintTotoBox();
-    // loginForm id add or remove?
+    loginForm.classList.add(HIDDEN_CLASSNAME);
     loginInput.classList.add(HIDDEN_CLASSNAME);
     clockBox.classList.remove(CLOCKPOSITION_CLASSNAME);
 }
