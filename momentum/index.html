@@ -10,45 +10,38 @@
 
   <body>
     <div class="contents">
-      <div class="contents__main">
-        <div class="clock-and-name-box">
-          <div class="clock-box clock-initial-position">
-            <h2 id="clock">00:00:00</h2>
-          </div>
-
-          <form class="login-form hidden">
-            <input
-              required
-              maxlength="14"
-              type="text"
-              placeholder="What is your name?"
-            />
-          </form>
-
-          <h1 id="greeting" class="hidden"></h1>
-        </div>
-
-        <div class="todo-box hidden">
-          <form id="todo-form">
-            <input
-              type="text"
-              placeholder="Write a To Do and Press Enter"
-              required
-            />
-          </form>
-
-          <ul id="todo-list"></ul>
+      <div class="clock-and-weather-box">
+        <h2 id="clock">00:00:00</h2>
+        <div id="weather">
+          <span></span>
+          <span></span>
         </div>
       </div>
+
+      <form class="login-form hidden">
+        <h1 class="ask-name">What's your name?</h1>
+        <input required maxlength="14" type="text" />
+      </form>
+
+      <h1 class="greeting hidden"></h1>
 
       <div id="quote">
         <span></span>
         <span></span>
       </div>
 
-      <div id="weather">
-        <span></span>
-        <span></span>
+      <div class="todo-box">
+        <div class="todo-window hidden">
+          <h2>Today's Todo</h2>
+          <form>
+            <input type="text" placeholder="New Todo" required />
+          </form>
+          <ul id="todo-list"></ul>
+        </div>
+
+        <form class="todo-btn">
+          <button>Todo</button>
+        </form>
       </div>
     </div>
     <div class="img-box"></div>

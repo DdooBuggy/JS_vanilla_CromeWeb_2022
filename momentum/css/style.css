@@ -1,10 +1,6 @@
 /* 폰트 */
 @import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap");
 
-/* screens */
-@import "screens/horizontally_long.css";
-@import "screens/horizontally_short.css";
-
 /* reset */
 @import "reset.css";
 
@@ -17,4 +13,72 @@ body {
 }
 .hidden {
   display: none;
+}
+
+.clock-and-weather-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+#clock {
+  font-size: 40px;
+  font-weight: 400;
+}
+#quote {
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.todo-box {
+  position: absolute;
+  bottom: 13%;
+  right: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.todo-btn button {
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+}
+.todo-btn button:hover {
+  cursor: pointer;
+}
+.todo-window {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 10px;
+  border-radius: 10px;
+  width: 300px;
+  margin-bottom: 20px;
+}
+.todo-window h2 {
+  margin-bottom: 10px;
+}
+.todo-window input {
+  width: 270px;
+}
+.todo-window button {
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  font-weight: 400;
+  width: auto;
+  height: auto;
+  color: white;
+}
+#todo-list {
+  margin-top: 5px;
+}
+#todo-list li {
+  display: flex;
+  justify-content: space-between;
+}
+.todo-checked {
+  opacity: 0.5;
 }
