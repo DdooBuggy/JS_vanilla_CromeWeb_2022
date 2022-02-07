@@ -1,11 +1,11 @@
 /* 폰트 */
+@import url("https://fonts.googleapis.com/css2?family=Stylish&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap");
-
 /* reset */
 @import "reset.css";
 
 body {
-  font-family: "Mochiy Pop P One", sans-serif;
+  font-family: "Mochiy Pop P One", "Stylish", sans-serif;
   color: white;
 }
 * {
@@ -15,7 +15,16 @@ body {
   display: none;
 }
 
+.contents {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 .clock-and-weather-box {
+  position: absolute;
+  top: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 20px 40px;
@@ -32,6 +41,22 @@ body {
   display: flex;
   flex-direction: column;
 }
+.login-form {
+  font-size: 50px;
+}
+.login-form input {
+  width: 100%;
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  transition: border-color 0.3s ease-in-out;
+}
+.login-form input:focus {
+  border-color: tomato;
+}
+.greeting {
+  font-size: 50px;
+}
 .todo-box {
   position: absolute;
   bottom: 13%;
@@ -41,17 +66,19 @@ body {
   align-items: flex-end;
 }
 .todo-btn button {
+  font-family: "Mochiy Pop P One", "Stylish", sans-serif;
   border: none;
-  background-color: transparent;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
   font-size: 20px;
-  font-weight: 400;
   color: white;
 }
 .todo-btn button:hover {
   cursor: pointer;
 }
 .todo-window {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 10px 10px;
   border-radius: 10px;
   width: 300px;
@@ -62,6 +89,11 @@ body {
 }
 .todo-window input {
   width: 270px;
+  color: white;
+  transition: border-color 0.3s ease-in-out;
+}
+.todo-window input:focus {
+  border-color: salmon;
 }
 .todo-window button {
   border: none;
@@ -72,12 +104,17 @@ body {
   height: auto;
   color: white;
 }
+.todo-window i {
+  cursor: pointer;
+}
 #todo-list {
   margin-top: 5px;
 }
 #todo-list li {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
 }
 .todo-checked {
   opacity: 0.5;

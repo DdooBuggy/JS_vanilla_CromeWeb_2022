@@ -1,17 +1,17 @@
 const loginForm = document.querySelector(".login-form");
 const loginInput = document.querySelector(".login-form input");
-const greeting = document.querySelector("#greeting");
-const clockBox = document.querySelector(".clock-box")
+const greeting = document.querySelector(".greeting");
+
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
 const savedUsername = localStorage.getItem(USERNAME_KEY);
-const CLOCKPOSITION_CLASSNAME = "clock-initial-position";
+
 
 function onLoginSubmit(event) {
     event.preventDefault();
     loginForm.classList.add(HIDDEN_CLASSNAME);
     loginInput.classList.add(HIDDEN_CLASSNAME);
-    clockBox.classList.remove(CLOCKPOSITION_CLASSNAME);
+
     const typedUsername = loginInput.value;
     localStorage.setItem(USERNAME_KEY, typedUsername);
     paintGreetings(typedUsername)
@@ -29,6 +29,6 @@ if (savedUsername === null) {
     paintGreetings(savedUsername);
     loginForm.classList.add(HIDDEN_CLASSNAME);
     loginInput.classList.add(HIDDEN_CLASSNAME);
-    clockBox.classList.remove(CLOCKPOSITION_CLASSNAME);
+
 }
 loginForm.addEventListener("submit", onLoginSubmit);
