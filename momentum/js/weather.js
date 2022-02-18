@@ -1,5 +1,5 @@
 const temp = document.querySelector("#weather span:first-child");
-const weatherIcon = document.querySelector("#weather span:last-child");
+const city = document.querySelector("#weather span:last-child")
 const API_KEY = "f047a860a4ee2cdc7ecf19fd0e744d7d";
 const LATITUDE = "latitude";
 const LONGITUDE = "longitude";
@@ -8,8 +8,8 @@ function paintGeo(url) {
     fetch(url)
     .then((response) => response.json())
     .then((data) => {
-        temp.innerText = `${data.main.temp}℃`;
-        weatherIcon.innerText = data.weather[0].main;
+        temp.innerText = `${data.main.temp}℃ ${data.weather[0].main}`;
+        city.innerText = data.name;
         });
 }
 
